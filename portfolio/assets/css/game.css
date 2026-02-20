@@ -1,0 +1,89 @@
+/* Game Section */
+#fun-zone {
+    background-color: #0f172a;
+    /* Match body bg for seamless look */
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+}
+
+.game-container {
+    width: 100%;
+    height: 600px;
+    /* Fixed height for the game view */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: none;
+    /* Hide cursor for immersion */
+}
+
+/* UI Overlay */
+.game-ui {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.score {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    font-family: 'Courier New', monospace;
+    /* Tech feel */
+    opacity: 0.8;
+}
+
+.start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 20;
+    background: rgba(15, 23, 42, 0.85);
+    /* Semi-transparent background */
+    backdrop-filter: blur(8px);
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.start-screen h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.start-screen p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-start {
+    background: var(--text-main);
+    color: var(--bg-body);
+    padding: 1rem 3rem;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
